@@ -9,6 +9,9 @@
   border: 2px solid blanchedalmond;
   box-shadow: 10px 12px 12px 0px #cab1b14d;
   padding: 48px 16px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 .title {
   font-size: 36px;

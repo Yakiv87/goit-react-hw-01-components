@@ -1,21 +1,30 @@
-import Profile from './Profile/Profile';
-import Statistics from './Statistics/Statistics';
-import FriendList from './FriendList/FriendList';
-// import FriendListItem from './FriendListItem/FriendListItem';
-import TransactionHistory from './TransactionHistory/TransactionHistory';
+import css from 'index.css';
 
-import user from './JSON/user.json';
-import statisticalData from './JSON/data.json';
-import friends from './JSON/friends.json';
-import transactions from './JSON/transactions.json';
+import { Profile } from './Profile/Profile';
+import user from './Profile/user';
+
+import { Statistics } from './Statistics/Statistics';
+import data from './Statistics/data';
+
+import { FriendList } from './FriendList/FriendList';
+import friends from './FriendList/friends';
+
+import { TransactionHistory } from './TransactionHistory/TransactionHistory';
+import transactions from './TransactionHistory/transactions';
 
 export const App = () => {
   return (
-    <div>
-    <Profile user={user} />
-    <Statistics title="Upload stats" stats={statisticalData} />
-    <FriendList friends={friends} />
-    <TransactionHistory items={transactions} />
-  </div>
+    <div className={css.container}>
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
+      <Statistics title="Upload stats" stats={data} />
+      <FriendList friends={friends} />
+      <TransactionHistory transactions={transactions} />
+    </div>
   );
 };

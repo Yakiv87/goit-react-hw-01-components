@@ -10,6 +10,9 @@
   border-radius: 24px;
   border: 2px solid blanchedalmond;
   box-shadow: 10px 12px 12px 0px #cab1b14d;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .transactionHistoryTableHeader {
@@ -18,7 +21,7 @@
   font-size: 36px;
   text-transform: uppercase;
   border-radius: 12px;
-  background-color: hsla(215, 98%, 79%, 0.4);
+  background-color: hsla(215, 45%, 30%, 0.4);
   box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
 }
 
@@ -33,23 +36,31 @@
   box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
   font-size: 24px;
 }
-.amount {
-  font-weight: 700;
-  color: rgba(39, 19, 59, 0.8);
-  border-bottom: 2px solid rgba(39, 19, 59, 0.2);
+tr {
+  display: flex;
+  border-radius: 8px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+ font-weight: 500;
+}
+tr:nth-child(odd) {
+  background-color: hsla(215, 98%, 79%, 0.3);
+}
+td {
+  display: flex;
+  min-height: 40px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% / 3);
+  font-size: 18px;
 }
 
-.currency {
-  font-weight: 900;
-  font-size: 16px;
-  color: rgba(39, 19, 59, 0.8);
-  letter-spacing: 0.1rem;
-  border-bottom: 2px solid rgba(39, 19, 59, 0.2);
+.transactionHistoryTableType {
+  justify-content: flex-start;
 }
-.type {
-  font-weight: 700;
-  color: rgba(39, 19, 59, 0.8);
-  padding: 8px;
-  border-bottom: 2px solid rgba(39, 19, 59, 0.2);
-  /* border: 1px solid rgba(39, 19, 59, 0.5); */
+
+.transactionHistoryTableCurrency {
+  justify-content: flex-end;
 }
